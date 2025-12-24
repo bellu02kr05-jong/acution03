@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경매 닥터 | Antigravity</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="detail-overlay">
+
+    <header>
+        <div class="container nav-container">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-bolt" style="color: var(--accent-primary); font-size: 1.2rem;"></i>
+                <span style="font-size: 1.2rem; font-weight: 800; letter-spacing: -0.5px;">Antigravity</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">대시보드</a>
+                <a href="#">지도 검색</a>
+                <a href="#">AI 권리분석</a>
+                <a href="#">나의 관심물건</a>
+            </nav>
+            <div style="display: flex; align-items: center; gap: 8px; color: var(--text-muted); cursor: pointer;">
+                <i class="fa-solid fa-circle-user"></i>
+                <span>luckyme 님 <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 20px;">
+        <div class="detail-card">
+            <!-- Main Content Area -->
+            <div class="detail-main">
+                <div class="detail-header">
+                    <div style="display: flex; align-items: center; gap: 12px; cursor: pointer;"
+                        onclick="history.back()">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span style="font-weight: 700; font-size: 1.1rem;">경매 닥터 : 2023타경10492</span>
+                    </div>
+                    <i class="fa-solid fa-xmark" style="color: var(--text-muted);"></i>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 100px; gap: 16px;">
+                    <img id="main-img" src="" class="detail-img-large">
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=200"
+                            style="width: 100%; height: 80px; object-fit: cover; border-radius: 8px; opacity: 0.5;">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=200"
+                            style="width: 100%; height: 80px; object-fit: cover; border-radius: 8px; border: 2px solid var(--accent-primary);">
+                        <div
+                            style="background: rgba(0,0,0,0.5); height: 80px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 24px;">
+                    <span
+                        style="background: var(--safe-green); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; gap: 6px;">
+                        <i class="fa-solid fa-circle-check"></i> AI 권리분석: 안전 (95점)
+                    </span>
+                </div>
+
+                <div class="detail-tabs">
+                    <div class="detail-tab active">기본 정보</div>
+                    <div class="detail-tab">등기/권리 현황</div>
+                    <div class="detail-tab">시세/실거래</div>
+                </div>
+
+                <div class="info-table">
+                    <div class="info-label">사건번호</div>
+                    <div class="info-value">2023타경10492</div>
+                    <div class="info-label">관할법원</div>
+                    <div class="info-value">서울중앙지방법원</div>
+                    <div class="info-label">감정가</div>
+                    <div class="info-value">32억 원</div>
+                    <div class="info-label">최저매각가격</div>
+                    <div class="info-value" style="color: var(--accent-primary);">25억 6000만원 (80%)</div>
+                </div>
+
+                <div class="ai-summary-highlight">
+                    <div style="font-weight: 700; margin-bottom: 12px;">AI 권리분석 요약</div>
+                    <div style="font-weight: 700; color: #fff; margin-bottom: 8px;">말소기준권리</div>
+                    <div style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; word-break: keep-all;">
+                        말소기준권리(근저당) 이후 발견되는 임차인 등 권리는 소멸되어 낙찰자가 인수할 위험이 없습니다.
+                        현황조사서상 채무자 겸 소유자가 점유 중인 것으로 확인되어 명도 과정 또한 유리할 것으로 분석됩니다.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Panel Area -->
+            <div class="chat-panel">
+                <div class="chat-header">
+                    <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Antigravity"
+                        style="width: 32px; height: 32px; border-radius: 50%; background: #fff;">
+                    <div style="font-weight: 700; font-size: 0.95rem;">경매 닥터 AI</div>
+                    <div style="flex: 1;"></div>
+                    <i class="fa-solid fa-minus" style="font-size: 0.8rem; color: var(--text-muted);"></i>
+                    <i class="fa-solid fa-xmark" style="font-size: 0.8rem; color: var(--text-muted);"></i>
+                </div>
+
+                <div style="padding: 12px 20px;">
+                    <div
+                        style="background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 8px; display: flex; align-items: center; gap: 8px;">
+                        <i class="fa-solid fa-magnifying-glass" style="font-size: 0.8rem; color: var(--text-dim);"></i>
+                        <span style="font-size: 0.8rem; color: var(--text-dim);">검색이 활성화됩니다...</span>
+                    </div>
+                </div>
+
+                <div class="chat-body" id="chat-box" style="display: flex; flex-direction: column;">
+                    <div class="chat-bubble bubble-ai">
+                        해당 물건의 부동산등기부와 매각물건명세서를 정밀 분석하였습니다. 현재 시세 대비 입찰가와 명도 리스크 등 궁금하신 점을 말씀해 주세요. 😊
+                    </div>
+                </div>
+
+                <div style="padding: 0 20px 20px;">
+                    <!-- Quick Actions -->
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
+                        <button class="btn-action" onclick="sendMsg('예상 낙찰가?')">예상 낙찰가?</button>
+                        <button class="btn-action" onclick="sendMsg('예상 낙찰가?')">예상 낙찰가?</button>
+                        <button class="btn-action" onclick="sendMsg('입주 가능?')">입주 가능?</button>
+                        <button class="btn-action" onclick="sendMsg('낙찰비 입주 가능?')">낙찰비 입주 가능?</button>
+                    </div>
+
+                    <div
+                        style="background: #252932; border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; gap: 12px;">
+                        <input type="text" id="chat-input" placeholder="경계를 질문하세요..."
+                            style="flex: 1; background: transparent; border: none; color: #fff; outline: none; font-size: 0.9rem;">
+                        <i class="fa-solid fa-paper-plane" style="color: var(--accent-primary); cursor: pointer;"
+                            onclick="sendInput()"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <style>
+        .btn-action {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-action:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+    </style>
+
+    <script>
+        // Init data
+        const MOCK_MAP = {
+            "2023-10492": { img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1000" },
+            "2024-3321": { img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000" },
+            "2023-5510": { img: "https://images.unsplash.com/photo-1600596542815-6ad4c12756ab?q=80&w=1000" }
+        };
+        const id = new URLSearchParams(window.location.search).get('id') || "2023-10492";
+        document.getElementById('main-img').src = MOCK_MAP[id].img;
+
+        function sendMsg(text) {
+            const box = document.getElementById('chat-box');
+            box.innerHTML += `<div class="chat-bubble bubble-user">${text}</div>`;
+            box.scrollTop = box.scrollHeight;
+
+            setTimeout(() => {
+                box.innerHTML += `<div class="chat-bubble bubble-ai">분석 결과, 해당 물건의 권리 관계는 매우 안전하며 주변 낙찰 기록을 볼 때 입찰가 조절이 핵심입니다.</div>`;
+                box.scrollTop = box.scrollHeight;
+            }, 600);
+        }
+
+        function sendInput() {
+            const input = document.getElementById('chat-input');
+            if (input.value) sendMsg(input.value);
+            input.value = '';
+        }
+
+        document.getElementById('chat-input').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendInput();
+        });
+    </script>
+</body>
+
+</html>

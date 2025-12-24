@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigravity | AI 부동산 경매</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-bolt" style="color: var(--accent-primary); font-size: 1.2rem;"></i>
+                <span style="font-size: 1.2rem; font-weight: 800; letter-spacing: -0.5px;">Antigravity</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="active">대시보드</a>
+                <a href="#">지도 검색</a>
+                <a href="#">AI 권리분석</a>
+                <a href="#">나의 관심물건</a>
+            </nav>
+            <div style="display: flex; align-items: center; gap: 8px; color: var(--text-muted); cursor: pointer;">
+                <i class="fa-solid fa-circle-user"></i>
+                <span style="font-size: 0.9rem;">luckyme 님 <i class="fa-solid fa-chevron-down"
+                        style="font-size: 0.7rem;"></i></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>복잡한 권리분석,<br>AI가 3초 만에 끝냅니다.</h1>
+            <div class="search-box">
+                <input type="text" placeholder="AI 스마트 검색">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </section>
+
+        <section style="margin-bottom: 60px;">
+            <h2 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 24px;">오늘의 AI 추천 물건</h2>
+            <div id="auction-grid" class="grid">
+                <!-- Cards injected here -->
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const MOCK_DATA = [
+            {
+                id: "2023-10492",
+                image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1000&auto=format&fit=crop",
+                badge: "안전",
+                badgeClass: "badge-green",
+                address: "서울 포렌구딩시 럭키 산동 5020",
+                price: "335,000 원",
+                originalPrice: "835,215 원",
+                summary: "대항력 없는 임차인으로 명도 용이..."
+            },
+            {
+                id: "2024-3321",
+                image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000&auto=format&fit=crop",
+                badge: "위험",
+                badgeClass: "badge-red",
+                address: "서울 미천명도시 퀀 1안동 8000",
+                price: "236,000 원",
+                originalPrice: "835,215 원",
+                summary: "대항력 있는 임차인으로 명도 위험..."
+            },
+            {
+                id: "2023-5510",
+                image: "https://images.unsplash.com/photo-1600596542815-6ad4c12756ab?q=80&w=1000&auto=format&fit=crop",
+                badge: "주의",
+                badgeClass: "badge-yellow",
+                address: "서울 대전해사 정시 구 2",
+                price: "180,000 원",
+                originalPrice: "835,215 원",
+                summary: "대항력 없는 임차인으로 명..."
+            }
+        ];
+
+        document.getElementById('auction-grid').innerHTML = MOCK_DATA.map(item => `
+            <div class="card" onclick="location.href='details.html?id=${item.id}'">
+                <div class="card-img-wrap">
+                    <img src="${item.image}" alt="">
+                    <span class="card-badge ${item.badgeClass}">${item.badge}</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-address">${item.address}</div>
+                    <div class="card-price">${item.price} <span style="font-size: 0.8rem; color: var(--text-dim); text-decoration: line-through; font-weight: 400; margin-left: 8px;">${item.originalPrice}</span></div>
+                    <div style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 8px;">AI 총평</div>
+                    <div class="card-ai-box">
+                        ${item.summary}
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    </script>
+</body>
+
+</html>
