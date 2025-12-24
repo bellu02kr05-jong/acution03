@@ -1,9 +1,9 @@
 # Task Checklist: Antigravity AI RAG Engine
 
-- [/] **Phase 1: Database & Storage**
+- [x] **Phase 1: Database & Storage**
     - [x] Create PostgreSQL Schema V2 (Vector Optimized)
-    - [ ] Initialize Supabase Project (Enable `pgvector`)
-    - [ ] Create Storage Buckets (`auction-files`)
+    - [x] Initialize Supabase Project (`auction_items`, `document_chunks`)
+    - [x] Create Storage Buckets (`auction-files`)
 
 - [/] **Phase 2: Data Pipeline (Python)**
     - [x] Setup Environment (`playwright`, `bs4`, `supabase`)
@@ -12,7 +12,7 @@
     - [ ] Database: Insert Items metadata
 
 - [ ] **Phase 3: RAG Engine (Smart Brain)**
-    - [x] Processor: PDF Text Extraction & Chunking Logic (Drafted)
+    - [x] Processor: PDF Text Extraction & Chunking Logic
     - [ ] Embedder: Create Vector Embeddings (Gemini/OpenAI) 
     - [ ] Store: Save Embeddings to `document_chunks`
     - [ ] Query Logic: Implement Semantic Search Function

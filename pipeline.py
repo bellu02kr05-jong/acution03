@@ -6,9 +6,20 @@ from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
 from supabase import create_client, Client
 
-# --- CONFIGURATION (사용자 설정 필요) ---
-SUPABASE_URL = "YOUR_SUPABASE_PROJECT_URL"
-SUPABASE_KEY = "YOUR_SUPABASE_SERVICE_ROLE_KEY"
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
+# --- CONFIGURATION ---
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+
+if not SUPABASE_URL or not SUPABASE_KEY:
+    print("Error: SUPABASE_URL or SUPABASE_KEY not found in .env file.")
+    print("Please create a .env file with your Supabase credentials.")
+    # exit() # Commented out for simulation mode
+
 # supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 class AntigravityPipeline:
